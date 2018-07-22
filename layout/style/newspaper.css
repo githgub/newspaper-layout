@@ -1,0 +1,150 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  width: 980px;
+  height: 1386px;
+}
+.content{
+  width: 892px;
+  margin: 0 auto;
+}
+/*head*/
+.head {
+  width: 892px;
+  height: 61px;
+  position: relative;
+  margin: 0 auto;
+}
+.head .address {
+  position: relative;
+  width: 110px;
+  height: 61px;
+  background-color: #d45d5c;
+  color: white;
+  font-family: SimHei;
+  font-size: 12px;
+  float: left;
+}
+.address p {
+  position: absolute;
+  left: 10px;
+  bottom: 0;
+}
+.head .date {
+  font-family: SimHei;
+  font-size: 12px;
+  color: #d45d5c;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.under-line {
+  width: 892px;
+  height: 2px;
+  background-color: #938e8c;
+  margin: 0 auto;
+}
+
+/*title*/
+.title {
+  width: 892px;
+  height: 301px;
+  margin: 30px auto;
+  position: relative;
+}
+.title .image {
+  position:absolute;
+  left:0;
+  width: 641px;
+  height: 301px;
+}
+.image img {
+  width: 641px;
+  height: 301px;
+  z-index: 0;
+}
+.imgbox1 {
+  width: 191px;
+  height: 301px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: 1;
+  background-color: rgba(
+    128,
+    214,
+    178,
+    0.5
+  ); /*rgba设置透明度只会改变元素本身透明度*/
+}
+.imgbox2 {
+  width: 191px;
+  height: 301px;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  z-index: 1;
+  background-color: rgb(218, 87, 77);
+  opacity: 0.5; /*也可实现透明度，opacity设置透明度会使子元素透明度也改变*/
+}
+
+.text {
+  width: 203px;
+  height: 301px;
+  position: absolute;
+  right: 0;
+}
+
+.overline {
+  position: absolute;
+  top: 0;
+  width: 203px;
+  height: 2px;
+  background-color: #cc8091;
+}
+.content-text{
+  overflow: hidden;
+  margin-top:20px;
+}
+.content-left{
+  float: left;
+  width:42%;
+  margin: 0 20px ;
+}
+.content-right{
+  width:52%;
+  float:left;
+}
+.content-right img{
+  width:458px;
+  height:275px;
+  z-index: 0;
+}
+.right-bottom{
+  width:459px;
+  height:318px;
+  background-color: bisque;
+  margin-top: 20px;
+  overflow: hidden;
+  position: relative;
+}
+.right-bottom .box1{
+  margin:20px 10px 20px 20px;
+}
+.right-bottom .box1 p{
+  margin-bottom: 20px;
+  font-size: 16px;
+  color:#5a5b5b;
+}
+.right-bottom .box2{
+  width:260px;
+  height:160px;
+  background-color: #d45d5c;
+  position: absolute;bottom: 0;
+  text-align: center;
+  line-height: 160px;
+}
+

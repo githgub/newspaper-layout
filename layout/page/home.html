@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" type="text/css" href="mystyle.css"></link>
+</head>
+<body>
+<div style="margin-left: 180px">
+  <img src="../image/title.png" style="width:100%">
+  <!--100%是基于父元素宽度的，默认情况下元素宽度不包括margin/padding/border，所以可设置子元素宽度为100%-->
+</div>
+
+<p>使用margin-left+右侧子元素width：100%实现两栏自适应布局</p>
+<div style="overflow: auto">
+    <img src="../image/title.png" width="100px" style="float:left;"><!--用absolute也是一样效果-->
+    <div style="margin-left: 100px"><img src="../image/title.png" width="100%" height="190"></div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+*{
+  margin:0;
+  padding:0;
+}
+div,p{
+  border-style: solid;
+  border-color: red;
+  border-width: 2px;
+}
+body{
+  width:100%;
+}
+.left{
+  float: left;
+  width:100px;
+}
+.right{
+  float:right;
+  margin-left: 20px;
+}
+
+.two-inline{
+  font-size: 0;
+  box-sizing: content-box;
+/*父元素fontsize设置为0，可以消除两个inline-block子元素之间的空格带来的间距。*/
+}
+.inline-left{
+  display:inline-block;
+  font-size: 12px;
+  vertical-align: top;
+  box-sizing: border-box;
+  /*另外fontsize会继承，父元素设置为0，所以子元素要重新设置一下*/
+  width:80px;
+}
+.inline-right{
+  display:inline-block;
+  font-size: 12px;
+  vertical-align: top;
+  box-sizing: border-box;
+  /*另外fontsize会继承，父元素设置为0，所以子元素要重新设置一下*/
+  width:calc(100% - 80px);/*注：calc运算符号两边之间要加空格*/
+}

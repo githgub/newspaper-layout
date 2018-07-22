@@ -1,0 +1,269 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.nav {
+  width: 100%;
+  padding: 0 40px;
+  box-sizing: border-box;
+  height: 60px;
+}
+.navhead {
+  float: left;
+  height: 60px;
+  line-height: 60px;
+}
+.navhead img {
+  width: 40px;
+  height: 40px;
+
+  display: inline-block;
+  margin-right: 20px;
+  vertical-align: middle;
+}
+.navhead p {
+  font-size: 26px;
+  display: inline-block;
+  vertical-align: middle;
+  color: #555555;
+}
+.navbar {
+  float: right;
+  list-style: none;
+  height: 60px;
+  line-height: 60px;
+}
+.navbar li {
+  float: left;
+  margin-right: 10px;
+}
+.login {
+  margin-right: 0;
+  color: red;
+}
+.navbarlink {
+  text-decoration: none;
+  font-size: 16px;
+  color: #888888;
+  display: block;
+  height: 60px;
+}
+/*点击后链接的效果*/
+.aClick {
+  color: red;
+  border-bottom: 3px solid red;
+}
+.head {
+  width: 100%;
+  height: 500px;
+  background-image: url("../image/4.jpeg");
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: -20px -50px;
+  line-height: 500px;
+}
+.headtext {
+  display: inline-block;
+  line-height: normal;
+  vertical-align: middle;
+  margin-left: 50px;
+}
+.headtext .p1 {
+  font-size: 50px;
+  color: white;
+  margin-bottom: 20px;
+}
+.headtext .p2 {
+  font-size: 30px;
+  color: white;
+  margin-bottom: 50px;
+}
+.headtext .p3 {
+  width: 400px;
+  font-size: 40px;
+  color: white;
+  background-color: red;
+  text-align: center;
+}
+.classify {
+  display: flex;
+  flex-wrap: nowrap;
+}
+.classify div {
+  text-align: center;
+  flex: 1;
+  height: 200px;
+}
+.classify p {
+  border-right: 2px solid #888888;
+  padding: 10px;
+}
+.classify-icon {
+  width: 40px;
+  height: 40px;
+  margin: 20px 0;
+}
+
+.new-world {
+  text-align: center;
+  height: 300px;
+  line-height: 300px;
+  background-color: #eeeeee;
+}
+.new-worldcontent {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: normal;
+}
+.new-worldcontent img {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 30px;
+}
+.new-worldcontent p {
+  font-size: 60px;
+  color: #888888;
+}
+
+.serachbox {
+  height: 400px;
+  background-image: url("../image/5.jpeg");
+  background-size: 100%;
+  line-height: 400px;
+  text-align: center;
+}
+.listform {
+  line-height: normal;
+  display: inline-block;
+  width: 100%;
+}
+.slectbox {
+  width: 20%;
+  display: inline-block;
+  margin-right: 20px;
+}
+.clickbutton {
+  padding: 8px;
+  background-image: url("../image/icon.jpg");
+  background-repeat: no-repeat;
+  background-size: 16px;
+  background-position: right;
+  /*border: 1px solid red;*/
+  background-color: white;
+}
+.dropdownmenu {
+  display: none;
+  background-color: #eeeeee;
+  color: #888888;
+  list-style: none;
+}
+.search-button {
+  padding: 8px;
+  text-align: center;
+  background-color: red;
+  color: white;
+}
+/*照片栏*/
+.photo-bar {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center; /*水平居中*/
+  /*垂直居中*/
+  padding: 40px 0;
+}
+.photobox {
+  width: 20%;
+}
+.photo-imgbox {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 8px;
+}
+.photo-imgbox img {
+  width: 100%;
+}
+.photo-textbox {
+  font-size: 12px;
+}
+/*轮播图*/
+.slide-container {
+  height: 300px;
+  position: relative;
+}
+#slide-ul{
+  position: absolute;
+    left: 0;
+    top: 0;
+  text-align: center;
+  height: 300px;
+  overflow: hidden;
+  width: 400%;
+  transition: left 2s;
+}
+
+.slidebox {
+  float: left;
+  position: relative;
+  width:25%;
+}
+
+.slidebox img {
+  float: left;
+  width: 60%;
+  height: 300px;
+}
+.slidebox div {
+  float: left;
+  width: 40%;
+  text-align: center;
+}
+.slideBtn-box {
+  overflow: hidden;
+  list-style: none;
+  z-index: 1;
+  position: absolute;
+  bottom: 0;
+  right: 20%;
+  transform: translateX(50%);
+}
+.slideBtn {
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  border: 1px solid red;
+  margin: 10px;
+  float: left;
+}
+
+.lefticon{
+  position: absolute;
+  bottom: 50%;
+  left: 0;
+  z-index:1;
+  width: 20px;
+height: 20px;
+}
+.righticon{
+  position: absolute;
+  bottom: 50%;
+  right: 0;
+  z-index: 1;
+  width: 20px;
+  height:20px;
+}
+@keyframes myslideToleft {
+  0% {
+left:0;
+  }
+  100% { 
+    left:-100%;
+  }
+}
+@keyframes myslideToright {
+  0% {
+    left:100% 
+  }
+  100% {
+    left: 0;
+  }
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<!--两栏布局，左边固定，右边自适应-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" type="text/css" href="../style/layout2.css">
+</head>
+<body>
+  <div style="overflow: hidden">
+<p class="left">左边</p>
+<p class="right">（1.左右都用left的方法）右边</p>
+  </div>
+
+<div class="two-inline">
+    <p class="inline-left">左边</p>
+    <p class="inline-right">（2.左右都用inline-block的方法,需使用calc计算属性，并设置父元素：box-sizing: content-box;子元素：box-sizing: border-box;）<br>右边</p>
+</div>
+
+<div style="overflow: auto">
+  <p style="float:left;width:80px;box-sizing: border-box">左边</p>
+  <p style="margin-left: 80px;">右边<br>3.左边用float，右边用margin-left,右边的block会占据整行，所以不需设置其宽度(须知道左边的block的宽度)</p>
+</div>
+
+<div style="position:relative">
+  <p style="width:80px;position:absolute">左边</p>
+  <p style="margin-left:90px">右边<br>4.左边使用absolute，这样右边也能无视掉左边block的存在（两边就会共在一行）。右边元素使用margin-left</p>
+  </div>
+
+  <div style="overflow: auto">
+    <p style="float:left">左边</p>
+    <p style="overflow: auto">右边<br>*5.同样是利用了左侧浮动，但是右侧盒子通过overflow: auto;形成了BFC，因此右侧盒子不会与浮动的元素重叠。</p>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--双飞翼布局-->
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" type="text/css" href="../style/layout3.css">
+</head>
+
+<body>
+  <p>1.双飞翼布局
+    <br> 可以实现先加载主列，先加载重要的。所以先写主列（主列float,并且宽度为100%）， 然后再子列float（要是子列位于主列左边，因为主列宽度已为100%。所以要让子列margin-left:-100%;） 然后附加列float，（要让附加列位于主列右侧，要设置附加列margin-left为负的附加列的宽度。）
+    <br> 即通过简单的负边距，使子列和附加列定位到正确的位置
+    <br> 然后主列内的文字会被子列挡道，要设置主列内容正确定位，则可以在主列内再嵌套一个
+    div，设置左右margin.
+  </p>
+  <div class="grid-s5m0e5">
+    <div class="col-main">
+      <div class="main-wrap">我是主列</div>
+    </div>
+    <div class="col-sub">我是子列</div>
+    <div class="col-extra">我是附加列</div>
+  </div>
+
+
+  <p>2.圣杯布局</p>
+  <div>
+  <p class="title">标题栏</p>
+  <div class="container">
+    <div class="middle">我是主列</div>
+    <div class="left">我是子列</div>
+    <div class="right">我是附加列</div>
+  </div>
+  <p class="bottom">底栏</p>
+</div>
+
+
+<p>3.使用绝对定位(两边的box用绝对定位，限制在左右两侧，中间的box设置两边margin分别为左右两box的宽度，实现自身宽度自适应)</p>
+<div style="position:relative">
+  <div class="absolut-left">子列</div>
+  <div class="absolut-center">主列</div>
+  <div class="absolut-right">附加列</div>
+  </div>
+
+
+<p>4.</p>
+  <div class="outbox">
+    <div style="float:left;width:100px;background-color: #f00;color: #FFF;">子列</div>
+    <div style="float:right;width:100px;background-color: #00f;color: #FFF; ">附加列</div>
+    <div style="margin:0 100px; background-color: #0f0;color: #FFF;">主列</div>
+    </div>
+</body>
+
+</html>

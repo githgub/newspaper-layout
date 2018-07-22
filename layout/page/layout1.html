@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<!--水平垂直居中对齐常用方法-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" type="text/css" href="../style/layout1.css">
+</head>
+<body>
+  <!--水平居中-->
+  <p>水平居中</p>
+ <p class="inlin-h-center border">行内元素水平居中，设置text-align:center即可</p>
+
+<div>
+  <p class="widthed-block-hcenter border">定宽block元素水平居中，设置左右margin:auto即可</p>
+  </div>
+
+  <div class="nowidth-block-parent border">
+    <ul>
+      <li>a</li>
+      <li>b</li>
+      <li>c</li>
+      </ul>
+    </br>
+      <span style="color:red">不定宽block元素水平居中，父元素设置text-align：center,子元素设置为display:inline-block(inline-block宽度会根据包裹的内容扩充)，多用于图片、按钮、文字等的水平居中;</span>
+    </div>
+<div style="position: relative;height: 3em">
+  <div style="overflow: hidden;position: absolute;left: 50%;transform: translateX(-50%);"><!--不定宽子元素水平居中-->
+    <img src="../image/5.jpeg" style="width: 20px;height: 20px;float: left">
+    <p style="float: left;">新世界</p>
+    </div>
+  </div>
+<!--垂直居中-->
+<p>垂直居中</p>
+<div class="inline-vmiddle">
+1.父元素为定高block，子元素是行内元素，设置父元素行高等于高即可。
+  </div>
+
+  <div class="noheight-block-vmiddle">
+   <p>2.子元素是非定高block元素,可以设置其父元素display：table-cell,vertical-align:center;</p>
+        </div>
+
+     <div class="heighted-block-vmiddle">
+       <p>3.子元素定高，可通过margin/padding来设置居中</p>
+       </div>   
+<!--水平垂直居中-->
+<p class="border" style="height:4em;line-height: 4em;text-align: center">1.单行文本水平垂直居中，line-height=height,text-align:center;</p>
+<p class="border" style="width:400px;height:4em;display:table-cell;text-align: center;vertical-align: middle">2.table-cell+vertical-align+text-align的方式</p>
+<p class="border" style="height:4em;line-height: 4em;text-align: center">3.相对加绝对定位（各种偏移量确定的情况下）</p>
+
+<!--自适应导航条-->
+<div style="padding: 20px;">
+    <div>
+      <div style="float: left;">
+      <img src="../image/5.jpeg" style="width:40px;height:40px;vertical-align: middle">
+      <p style="display: inline-block;vertical-align: middle">logo</p>
+      </div>
+  
+      <div style="float:right;font-size: 20px;">
+      <p style="display: inline-block;vertical-align: middle;margin-right: 20px;">
+        首页
+      </p>
+      <p style="display: inline-block;vertical-align: middle;margin-right: 20px;">
+          首页
+        </p>
+        <p style="display: inline-block;vertical-align: middle;margin-right: 20px;">
+            首页
+          </p>
+          <p style="display: inline-block;vertical-align: middle;margin-right: 20px;">
+              首页
+            </p>
+            <p style="display: inline-block;vertical-align: middle">
+                首页
+              </p>
+          </div>
+      </div>
+      </div>
+</body>
+</html>
